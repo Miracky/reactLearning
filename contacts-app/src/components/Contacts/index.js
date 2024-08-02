@@ -7,7 +7,7 @@ function Contacts() {
   const [contacts, setContacts] = useState([
     {id: 1, fullname: "Mirac", phoneNumber: "555555" },
     {id: 2, fullname: "Yagmur", phoneNumber: "818181" },
-    {id: 3, fullname: "Emrah", phoneNumber: "242424" },
+    {id: 3, fullname: "Emrah", phoneNumber: "161616" },
   ]);
 
   useEffect(() => {
