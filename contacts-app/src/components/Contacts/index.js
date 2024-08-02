@@ -5,18 +5,23 @@ import {} from "./styles.css";
 
 function Contacts() {
   const [contacts, setContacts] = useState([
-    { fullname: "Mirac", phoneNumber: "555555" },
-    { fullname: "Yagmur", phoneNumber: "818181" },
-    { fullname: "Emrah", phoneNumber: "242424" },
+    {id: 1, fullname: "Mirac", phoneNumber: "555555" },
+    {id: 2, fullname: "Yagmur", phoneNumber: "818181" },
+    {id: 3, fullname: "Emrah", phoneNumber: "242424" },
   ]);
 
   useEffect(() => {
     console.log(contacts);
   }, [contacts]);
+
+  const handleRemoveContact = (contactToRemove) => {
+    setContacts(contacts.filter(contact => contact !== contactToRemove));
+  };
+
   return (
     <div id="container">
       <h1>Contacts</h1>
-      <List contacts={contacts} />
+      <List contacts={contacts}  onRemoveContact={handleRemoveContact}/>
       <Form addContact={setContacts} contacts={contacts}></Form>
     </div>
   );

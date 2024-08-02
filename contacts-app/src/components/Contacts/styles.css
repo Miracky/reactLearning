@@ -5,9 +5,13 @@
 }
 
 input {
+  border: none;
+  box-shadow: none;
+  background: none;
   width: 100%;
-  padding: 5px;
-  
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px 0px;
   background-color: #00adb5;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -15,6 +19,7 @@ input {
 }
 
 input:focus {
+  outline: none;
   background-color: #00fff5;
 }
 
@@ -36,20 +41,43 @@ li {
   padding: 5px;
   margin-bottom: 2px;
   display: flex;
+}
+
+.btn {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.btn > button {
+  padding: 5px;
+  width: 100px;
+  border-radius: 10px;
+  font-weight: bolder;
+  background-color:#FF8BA0;
+}
+.btn > button:hover{
+  background-color: #E41F7B;
+
+} 
+
+
+.list > .listItem {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
 }
 
-.btn{
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    padding: 5px 0;
+.list > li > .rembtn {
+  padding: 5px;
+  width: 100px;
+  border-radius: 10px;
+  font-weight: bolder;
+  background-color: #FF8BA0;
 }
 
-.btn>button{
-    padding: 5px;
-    width: 100px;
-    border-radius: 10px;
-    font-weight: bolder;
-    background-color: pink;
+.list > li > .rembtn:hover{
+  background-color: #E41F7B;
 }

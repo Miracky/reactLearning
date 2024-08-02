@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const initiaFormlValues = { fullname: "", phoneNumber: "" };
+const initiaFormlValues = {fullname: "", phoneNumber: "" };
 
 function Form({ addContact, contacts }) {
   const [form, setForm] = useState(initiaFormlValues);
@@ -41,7 +41,6 @@ function Form({ addContact, contacts }) {
         />
       </div>
       <div className="btn">
-        <button >Subtract - </button>
         <button onClick={onSubmit}>Add +</button>
       </div>
     </form>
