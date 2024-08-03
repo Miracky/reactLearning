@@ -1,5 +1,6 @@
 .App {
-  background-color: #222831;
+  background-image: url('backGround.jpg');
+  background-size: cover;
   color: rgb(212, 212, 221);
   display: flex;
   justify-content: center;
