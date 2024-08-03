@@ -4,24 +4,27 @@ import Form from "./Form";
 import {} from "./styles.css";
 
 function Contacts() {
-  const [contacts, setContacts] = useState([
-    {id: 1, fullname: "Mirac", phoneNumber: "555555" },
-    {id: 2, fullname: "Yagmur", phoneNumber: "818181" },
-    {id: 3, fullname: "Emrah", phoneNumber: "161616" },
-  ]);
+  const [contacts, setContacts] = useState(() => {
+    const savedContacts = localStorage.getItem("contacts");
+    return savedContacts
+      ? JSON.parse(savedContacts)
+      : [
+          
+        ];
+  });
 
   useEffect(() => {
-    console.log(contacts);
+    localStorage.setItem("contacts", JSON.stringify(contacts));
   }, [contacts]);
 
   const handleRemoveContact = (contactToRemove) => {
-    setContacts(contacts.filter(contact => contact !== contactToRemove));
+    setContacts(contacts.filter((contact) => contact.id !== contactToRemove.id));
   };
 
   return (
     <div id="container">
       <h1>Contacts</h1>
-      <List contacts={contacts}  onRemoveContact={handleRemoveContact}/>
+      <List contacts={contacts} onRemoveContact={handleRemoveContact} />
       <Form addContact={setContacts} contacts={contacts}></Form>
     </div>
   );

@@ -5,8 +5,7 @@ function List({ contacts, onRemoveContact }) {
 
   const filtered = contacts.filter((item) => {
     return Object.keys(item).some((key) =>
-      item[key]
-        .toString()
+      item[key]?.toString()
         .toLowerCase()
         .includes(filterText.toLocaleLowerCase())
     );
@@ -24,8 +23,8 @@ function List({ contacts, onRemoveContact }) {
       />
 
       <ul className="list">
-        {filtered.map((contact, i) => (
-          <li key={i} className="listItem">
+        {filtered.map((contact) => (
+          <li key={contact.id} className="listItem">
             <span> {contact.fullname} </span>
             <span>({contact.phoneNumber})</span>
             <button className="rembtn"

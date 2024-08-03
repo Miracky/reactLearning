@@ -19,7 +19,15 @@ function Form({ addContact, contacts }) {
       return false;
     }
 
-    addContact([...contacts, form]);
+    const maxId = contacts.reduce((max,contact)=> (contact.id > max ? contact.id : max), 0)
+
+    const newContact = {
+      id: maxId + 1,
+      fullname:form.fullname,
+      phoneNumber:form.phoneNumber
+    }
+
+    addContact([...contacts, newContact]);
   };
 
   return (
