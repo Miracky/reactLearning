@@ -1,11 +1,13 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import "./App.css";
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 
 // Sayfalar
 import About from "./components/About";
 import Home from "./components/Home";
 import Users from "./components/Users";
-import User from "./components/User";
+import Error404 from "./components/Error404";
+
 
 function App() {
   return (
@@ -14,21 +16,51 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <NavLink
+                style={({ isActive }) => {
+                  return {
+                    backgroundColor: isActive ? "#FF0000" : "inherit",
+                  };
+                }}
+                to="/"
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <NavLink
+                style={({ isActive }) => {
+                  return {
+                    backgroundColor: isActive ? "#FF0000" : "inherit",
+                  };
+                }}
+                to="/about"
+              >
+                About
+              </NavLink>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <NavLink
+                style={({ isActive }) => {
+                  return {
+                    backgroundColor: isActive ? "#FF0000" : "inherit",
+                  };
+                }}
+                to="/users"
+              >
+                Users
+              </NavLink>
             </li>
           </ul>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/users/*" element={<Users />} /> {/* Tüm /users/ altında olan rotaları kapsar */}
-          <Route path="/users/:userId" element={<User />} /> {/* Kullanıcı detayları için rota */}
+          <Route path="/users/*" element={<Users />} />
+          {/* Tüm /users/ altında olan rotaları kapsar */}
+          <Route path="*" element={<Error404 />} />
+
+          
         </Routes>
       </BrowserRouter>
     </div>
