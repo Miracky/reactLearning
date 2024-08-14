@@ -1,8 +1,8 @@
-import { useContext, useState } from "react";
-import UserContext from "../context/UserContext";
+import { useState } from "react";
+import {useUser} from "../context/UserContext";
 
 function Profile() {
-  const { user, setUser } = useContext(UserContext);
+  const { user, setUser } = useUser();
   const [loading, setLoading] = useState(false);
 
   const handleLogin = () => {
@@ -27,9 +27,7 @@ function Profile() {
       <br />
       <code>{JSON.stringify(user)}</code>
       <br />
-      {user && (
-        <button onClick={handleLogout}>LogOut</button>
-      )}
+      {user && <button onClick={handleLogout}>LogOut</button>}
     </div>
   );
 }
