@@ -1,0 +1,26 @@
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-color: #222831;
+  color: white;
+}
+
+.palette{
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.palette button{
+  border: none;
+  background-color: #00FFF5;
+  margin-top: 10px;
+}
+
+.palette input{
+  border: none;
+  background-color: #393E46;
+}
