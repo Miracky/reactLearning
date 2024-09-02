@@ -2,10 +2,15 @@ import { useEffect } from "react";
 import ChatList from "./ChatList";
 import ChatForm from "./ChatForm";
 import { init, subscribeChat, subscribeInitialMessages } from "../socketApi";
+import Button from "./Button";
+import { useTheme } from "../context/ThemeContext";
 
 import { useChat } from "../context/ChatContext";
 
 function Container() {
+
+  const {theme} = useTheme()
+
   const { setMessages } = useChat();
 
   useEffect(() => {
@@ -20,7 +25,8 @@ function Container() {
   },[]);
 
   return (
-    <div className="App">
+    <div className={`App ${theme}`}  >
+      <Button></Button>
       <ChatList></ChatList>
       <ChatForm></ChatForm>
     </div>

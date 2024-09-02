@@ -1,4 +1,15 @@
-.App {
-  width: 600px;
-  margin: 0 auto;
+.app {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+.appLight{
+  background-image: url('/src/lightbackground.jpg');
+}
+
+.appDark {
+  background-image: url('/src/darkbackground.jpg');
 }
