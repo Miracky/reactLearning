@@ -1,4 +1,3 @@
-import React from 'react'
 import { useTheme } from '../context/ThemeContext'
 
 function Button() {
@@ -14,4 +13,4 @@ function Button() {
   )
 }
 
-export default Button
+export default Button;

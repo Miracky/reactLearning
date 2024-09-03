@@ -1,18 +1,13 @@
 import "./App.css";
 import Container from "./components/Container";
 import { ChatProvider } from "./context/ChatContext";
-import { ThemeProvider, useTheme} from "./context/ThemeContext";
+import { ThemeProvider} from "./context/ThemeContext";
 
 function App() {
-  
-
-  
-
-  
 
   return (
-    <div  className={`app`} >
-      <ThemeProvider >
+    <div  className="App">
+      <ThemeProvider value="dark">
         <ChatProvider>
           <Container></Container>
         </ChatProvider>
