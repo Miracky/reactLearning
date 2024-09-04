@@ -20,7 +20,7 @@ function Container() {
     subscribeChat((message) => {
       setMessages((prevState) => [...prevState, { message }]);
     });
-  }, []);
+  });
 
   return (
     <div className={`app ${theme}`}>

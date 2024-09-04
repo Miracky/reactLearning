@@ -28,7 +28,7 @@ function ChatForm() {
         />
         
       </form>
-      <FontAwesomeIcon icon="fa-solid fa-share" />
+      <FontAwesomeIcon icon="fa-solid fa-paper-plane" />
     </div>
   );
 }
