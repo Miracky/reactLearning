@@ -12,9 +12,9 @@ function ChatList() {
     <div className={`${styles.chatlist} ${styles[theme]} `}>
       <ScrollableFeed forceScroll={true} >
         {messages.map((item, key) => (
-          <div key={key} className={`${styles.chatItem} ${styles[theme]} ${item.isRight && styles.right} `}>
+          
             <ChatItem item={item}/>
-          </div>
+          
           
         ))}
       </ScrollableFeed>

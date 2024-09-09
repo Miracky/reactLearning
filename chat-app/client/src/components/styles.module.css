@@ -1,5 +1,5 @@
 .chatlist {
-    height: 85vh;
+    height: 80vh;
     width: 85%;
     margin: 40px auto 0 auto;
     overflow: hidden;
@@ -15,7 +15,8 @@
   }
   
   .textInput {
-    margin: auto;
+    margin-left: 7%;
+    margin-bottom: 100px;
     background-color: white;
     color: black;
     padding: 10px;
@@ -24,22 +25,15 @@
     border-radius: 16px;
   }
 
-  /* Light Mode */
-.chatlist.light {
-}
-
 .textInput.light {
   color: black;
 }
 
 .chatItem.light {
   color: #333;
+  background-color: #FFF0F5;
 }
 
-/* Dark Mode */
-.chatlist.dark {
-  color: white;
-}
 
 .textInput.dark {
   color: white;
@@ -47,6 +41,8 @@
 
 .chatItem.dark {
   color: #f0f0f0;
+  background-color: #00ADB5;
+  
 }
   
   .chatItem {
@@ -71,3 +67,16 @@
     margin-left: auto;
   }
   
+  .button{
+    border-radius: 24px;
+    font-size: x-large;
+    margin: 12px 0px 0px 12px;
+  }
+
+  .button.dark{
+    background-color: #E3F2FD;
+  }
+
+  .button.light{
+    background-color: #393E46;
+  }

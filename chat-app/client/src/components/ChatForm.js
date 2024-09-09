@@ -2,7 +2,6 @@ import styles from "./styles.module.css";
 import { useState } from "react";
 import { sendMessage } from "../socketApi";
 import { useChat } from "../context/ChatContext";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ChatForm() {
   const [message, setMessage] = useState("");
@@ -28,7 +27,6 @@ function ChatForm() {
         />
         
       </form>
-      <FontAwesomeIcon icon="fa-solid fa-paper-plane" />
     </div>
   );
 }
